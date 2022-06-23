@@ -8,6 +8,6 @@ namespace PizzaDelivery.Services.Pedidos.Interfaces
         Task AtualizarPedidoAsync(PedidoModel pedido);
         Task ExcluirPedidoAsync(int pedidoId);
         Task<IEnumerable<PedidoModel>> ObterPedidosAsync(int statusPedido = 0);
-        Task<PedidoModel> ObterPedido(int pedidoId);
+        Task<PedidoModel> ObterPedidoAsync(int pedidoId);
     }
 }

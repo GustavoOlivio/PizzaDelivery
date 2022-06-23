@@ -1,0 +1,17 @@
+USE [PizzaDelivery]
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[Pedido](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[NomeCliente] [varchar](100) NOT NULL,
+	[EMail] [varchar](100) NOT NULL,
+	[Pedido] [varchar](200) NOT NULL,
+	[Valor] [decimal](18, 2) NULL,
+	[Status] [tinyint] NOT NULL,
+ CONSTRAINT [PK_Pedido] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]

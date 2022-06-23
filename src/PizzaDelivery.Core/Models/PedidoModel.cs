@@ -15,7 +15,6 @@ namespace PizzaDelivery.Core.Models
         public string NomeCliente { get; set; }
 
         [Required(ErrorMessage = "E-Mail obrigatório!")]
-        //[RegularExpression(@"/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i", ErrorMessage = "E-Mail em formato inválido!")]
         [StringLength(100, ErrorMessage = "O tamanho máximo de caracteres é 100.")]
         [Display(Name = "E-Mail")]
         [DataType(DataType.EmailAddress)]
@@ -28,7 +27,7 @@ namespace PizzaDelivery.Core.Models
 
         [Display(Name = "Valor do Pedido")]
         [DataType(DataType.Currency)]
-        public decimal Valor { get; set; }
+        public decimal? Valor { get; set; } = 0;
 
         [Required(ErrorMessage = "Status do pedido é obrigatório!")]
         [Display(Name = "Status do Pedido")]
