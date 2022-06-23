@@ -72,7 +72,7 @@ namespace PizzaDelivery.Services.Services.Pedidos
             }
         }
         
-        public async Task<PedidoModel> ObterPedido(int pedidoId)
+        public async Task<PedidoModel> ObterPedidoAsync(int pedidoId)
         {
             try
             {

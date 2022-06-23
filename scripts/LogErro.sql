@@ -1,0 +1,17 @@
+USE [PizzaDelivery]
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[LogErro](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Descricao] [varchar](50) NOT NULL,
+	[Local] [varchar](300) NOT NULL,
+	[StackTrace] [varchar](300) NULL,
+	[Data] [datetime] NOT NULL,
+ CONSTRAINT [PK_LogErro] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+

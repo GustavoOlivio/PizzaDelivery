@@ -47,7 +47,7 @@
     </dl>
 
     <form asp-action="ExcluirPedido">
-        <input type="submit" value="Excluir Pedido" class="btn btn-danger" />
-        <a class="btn btn-danger" asp-action="Listar">Voltar à Lista</a>
+        @Html.ActionLink("Excluir", "ExcluirPedido", new { @Model.Id }, new { @class = "btn btn-danger"}) |
+        <a class="btn btn-warning" asp-action="Listar">Voltar à Lista</a>
     </form>
 </div>

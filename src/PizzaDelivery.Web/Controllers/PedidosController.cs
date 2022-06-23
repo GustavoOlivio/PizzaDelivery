@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using PizzaDelivery.Core.Enums;
+﻿using Microsoft.AspNetCore.Mvc;
 using PizzaDelivery.Core.Models;
 using PizzaDelivery.Services.Pedidos.Interfaces;
-using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc.Html;
 
 namespace PizzaDelivery.Web.Controllers
 {
@@ -19,18 +14,18 @@ namespace PizzaDelivery.Web.Controllers
             _pedidoService = pedidoService;
         }
 
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return await Task.Run(() => View());
         }
 
         [Route("criar")]
-        public ActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            return await Task.Run(() => View());
         }
 
-        [Route("create")]
+        [Route("criarpedido")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PedidoModel pedidoModel)
@@ -56,7 +51,7 @@ namespace PizzaDelivery.Web.Controllers
         [Route("editar/{pedidoId}")]
         public async Task<IActionResult> Edit(int pedidoId)
         {
-            var pedido = await _pedidoService.ObterPedido(pedidoId);
+            var pedido = await _pedidoService.ObterPedidoAsync(pedidoId);
 
             return View(pedido);
         }
@@ -77,17 +72,17 @@ namespace PizzaDelivery.Web.Controllers
         }
 
         [Route("excluir/{pedidoId}")]
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int pedidoId)
         {
-            return View();
+            var pedido = await _pedidoService.ObterPedidoAsync(pedidoId);
+
+            return View(pedido);
         }
 
-        [Route("excluirpedido")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [Route("excluirpedido/{pedidoId}")]
         public async Task<IActionResult> ConfirmDelete(int pedidoId)
         {
-            await _pedidoService.ObterPedido(pedidoId);
+            await _pedidoService.ExcluirPedidoAsync(pedidoId);
 
             return RedirectToAction(nameof(List));
         }
