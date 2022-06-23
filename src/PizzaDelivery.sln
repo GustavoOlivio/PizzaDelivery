@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaDelivery.Web", "PizzaDelivery.Web\PizzaDelivery.Web.csproj", "{4967A908-7442-4A5F-8AC4-118D049650E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaDelivery.Web", "PizzaDelivery.Web\PizzaDelivery.Web.csproj", "{4967A908-7442-4A5F-8AC4-118D049650E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaDelivery.Services", "PizzaDelivery.Services\PizzaDelivery.Services.csproj", "{20BCAE7F-2236-48B2-84CC-212F99326D3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaDelivery.Infra", "PizzaDelivery.Infra\PizzaDelivery.Infra.csproj", "{E0F7C8E6-E233-4163-9F45-25338CC5B79F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaDelivery.Repository", "PizzaDelivery.Repository\PizzaDelivery.Repository.csproj", "{BB25C31C-B411-4F63-8410-60145A2E1F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaDelivery.Core", "PizzaDelivery.Core\PizzaDelivery.Core.csproj", "{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{38F5BC76-F2C6-47CE-8332-8431EEC8FA44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CB1D3925-019A-434C-8486-BC46B7E5ADD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{C988140E-A36E-42CF-BC2E-D91FC87B04B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{161D8F36-CADD-4425-9E91-5D50C275933B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +31,32 @@ Global
 		{4967A908-7442-4A5F-8AC4-118D049650E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4967A908-7442-4A5F-8AC4-118D049650E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4967A908-7442-4A5F-8AC4-118D049650E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BCAE7F-2236-48B2-84CC-212F99326D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BCAE7F-2236-48B2-84CC-212F99326D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BCAE7F-2236-48B2-84CC-212F99326D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BCAE7F-2236-48B2-84CC-212F99326D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F7C8E6-E233-4163-9F45-25338CC5B79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F7C8E6-E233-4163-9F45-25338CC5B79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F7C8E6-E233-4163-9F45-25338CC5B79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F7C8E6-E233-4163-9F45-25338CC5B79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB25C31C-B411-4F63-8410-60145A2E1F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB25C31C-B411-4F63-8410-60145A2E1F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB25C31C-B411-4F63-8410-60145A2E1F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB25C31C-B411-4F63-8410-60145A2E1F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4967A908-7442-4A5F-8AC4-118D049650E6} = {38F5BC76-F2C6-47CE-8332-8431EEC8FA44}
+		{20BCAE7F-2236-48B2-84CC-212F99326D3A} = {161D8F36-CADD-4425-9E91-5D50C275933B}
+		{E0F7C8E6-E233-4163-9F45-25338CC5B79F} = {CB1D3925-019A-434C-8486-BC46B7E5ADD9}
+		{BB25C31C-B411-4F63-8410-60145A2E1F31} = {C988140E-A36E-42CF-BC2E-D91FC87B04B5}
+		{7EBC0EBB-9E6C-44EB-A64F-9FD829F2828D} = {CB1D3925-019A-434C-8486-BC46B7E5ADD9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD0A0AA5-F7D9-49B7-B354-78D4F0C9903E}

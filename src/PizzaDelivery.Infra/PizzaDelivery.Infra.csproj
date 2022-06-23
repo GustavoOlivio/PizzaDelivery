@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Scrutor" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaDelivery.Core\PizzaDelivery.Core.csproj" />
+    <ProjectReference Include="..\PizzaDelivery.Repository\PizzaDelivery.Repository.csproj" />
+    <ProjectReference Include="..\PizzaDelivery.Services\PizzaDelivery.Services.csproj" />
+  </ItemGroup>
+
+</Project>
